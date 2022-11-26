@@ -1,10 +1,9 @@
-import React from 'react';
 import styles from './Item.module.scss';
 import {
+  AiOutlineHeart,
   AiFillHeart,
   AiFillMinusCircle,
   AiFillPlusCircle,
-  AiOutlineHeart,
 } from 'react-icons/ai';
 import { FaCartPlus } from 'react-icons/fa';
 import { mudarFavorito } from 'store/reducers/itens';
@@ -19,7 +18,7 @@ const iconeProps = {
 
 const quantidadeProps = {
   size: 32,
-  color: '#1875e8',
+  color: '#1875E8',
 };
 
 export default function Item(props) {
@@ -91,7 +90,7 @@ export default function Item(props) {
             ) : (
               <FaCartPlus
                 {...iconeProps}
-                color={estaNoCarrinho ? '#1875e8' : iconeProps.color}
+                color={estaNoCarrinho ? '#1875E8' : iconeProps.color}
                 className={styles['item-acao']}
                 onClick={resolverCarrinho}
               />
